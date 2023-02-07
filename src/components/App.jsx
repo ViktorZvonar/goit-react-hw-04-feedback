@@ -5,7 +5,7 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
 
-const voteOptions = ['good', 'neutral', 'bad'];
+// const voteOptions = ['good', 'neutral', 'bad'];
 
 const App = () => {
   const [votes, setVotes] = useState({
@@ -43,7 +43,7 @@ const App = () => {
     >
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={voteOptions}
+          options={Object.keys(votes)}
           onClick={onClick}
         ></FeedbackOptions>
       </Section>
